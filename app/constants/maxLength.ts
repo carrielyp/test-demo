@@ -1,0 +1,4 @@
+export const CONTACT_NUMBER_MAX_LENGTH = 30;
+export const INPUT_GENERAL_MAX_LENGTH = 255;
+export const TEXTAREA_GENERAL_MAX_LENGTH = 5000;
+export const NRIC_FIN_MAX_LENGTH = 9;
