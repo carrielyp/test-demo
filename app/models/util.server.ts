@@ -17,9 +17,9 @@ export const MenuList: HeaderMenu[] = [
     title: "Cases",
     route: "/case",
   },
-  { key: "client", title: "Clients", route: "/case" },
-  { key: "programme", title: "Programmes", route: "/case" },
-  { key: "report", title: "Reports", route: "/case" },
+  { key: "client", title: "Clients", route: "/client" },
+  // { key: "programme", title: "Programmes", route: "/programme" },
+  // { key: "report", title: "Reports", route: "/case" },
 ];
 
 export async function getMenu() {
