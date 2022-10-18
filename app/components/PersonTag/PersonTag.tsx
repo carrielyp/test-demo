@@ -36,9 +36,9 @@ export const PersonTagGroup = ({
   const personExtraInfo = {
     email: "louie_lui@msf.gov.sg",
     contactNumber: "94161918",
-    unitFull: "Child Protection Unit",
+    unitFull: "CP Unit",
     unitShort: "CPS",
-    designation: "Child Protection Officer"
+    designation: "CP Officer"
   };
 
   const selectedPersons = personInfo

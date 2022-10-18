@@ -40,7 +40,7 @@ export interface BrandDisplay {
 
 export const Brand: BrandDisplay = {
   logo: { visible: true, value: "cps" },
-  divisionName: { visible: false, value: "Child Protection" }
+  divisionName: { visible: false, value: "Division Name" }
 };
 
 export async function getBrand() {
