@@ -42,7 +42,7 @@ const user = {
 
 export const branding: any = {
   logo: { visible: true, value: "cps" },
-  divisionName: { visible: false, value: "Child Protection" }
+  divisionName: { visible: false, value: "Division Name" }
 };
 
 export const Layout: FC<Props> = ({
@@ -77,7 +77,7 @@ export const Layout: FC<Props> = ({
   return (
     <AntdLayout className="min-h-full bg-neutral-25">
       <div id={headerId} className="sticky top-0 z-50">
-        <SgdsMasthead />
+        {/* <SgdsMasthead /> */}
         <Header
           brand={getBrand(brand)}
           mainMenu={mainMenu}
