@@ -1,0 +1,63 @@
+import type { CSSProperties, ReactNode } from "react";
+
+export interface InputLabelProps {
+  id?: string;
+  className?: string;
+  style?: CSSProperties;
+  required?: boolean;
+  optional?: boolean;
+  assistiveText?: string;
+  nextLineAssistiveText?: ReactNode;
+  children: ReactNode;
+}
+
+export const InputLabel = ({
+  id,
+  className,
+  style,
+  required,
+  optional,
+  assistiveText,
+  nextLineAssistiveText,
+  children
+}: InputLabelProps) => (
+  <div
+    id={id}
+    className={`mb-2 text-sm font-semibold text-neutral-60 ${className || ""}`}
+    style={style}
+  >
+    {children}
+    {assistiveText ? (
+      <>
+        &nbsp;
+        <small className="font-normal italic leading-none">
+          ({assistiveText})
+        </small>
+      </>
+    ) : (
+      <>
+        {optional && (
+          <>
+            &nbsp;
+            <small className="font-normal italic leading-none">
+              (optional)
+            </small>
+          </>
+        )}
+        {required && (
+          <>
+            &nbsp;
+            <small className="font-normal italic leading-none">
+              (required)
+            </small>
+          </>
+        )}
+      </>
+    )}
+    {nextLineAssistiveText && (
+      <div>
+        <small className="font-normal italic">{nextLineAssistiveText}</small>
+      </div>
+    )}
+  </div>
+);

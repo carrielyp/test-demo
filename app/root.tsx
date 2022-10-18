@@ -8,7 +8,6 @@ import {
   ScrollRestoration,
   useCatch
 } from "@remix-run/react";
-import Layout from "./src/Layout";
 import style from "./styles/app.css";
 import antdStyles from "./styles/antd.customise.css";
 
@@ -36,7 +35,7 @@ const Document = ({ children, title }: DocumentProps) => {
       </head>
       <body>
         {children}
-        <ScrollRestoration />
+        {/* <ScrollRestoration /> */}
         <Scripts />
         <LiveReload />
       </body>
@@ -48,10 +47,8 @@ const Document = ({ children, title }: DocumentProps) => {
 // https://remix.run/api/conventions#route-filenames
 export default function App() {
   return (
-    <Document>
-      <Layout>
-        <Outlet />
-      </Layout>
+    <Document>      
+        <Outlet />      
     </Document>
   );
 }
@@ -61,8 +58,7 @@ export function ErrorBoundary({ error }: { error: Error }) {
   console.error(error);
 
   return (
-    <Document title="Error!">
-      <Layout>
+    <Document title="Error!">      
         <div>
           <h1>There was an error</h1>
           <p>{error.message}</p>
@@ -71,8 +67,7 @@ export function ErrorBoundary({ error }: { error: Error }) {
             Hey, developer, you should replace this with what you want your
             users to see.
           </p>
-        </div>
-      </Layout>
+        </div>      
     </Document>
   );
 }
@@ -102,13 +97,11 @@ export function CatchBoundary() {
   }
 
   return (
-    <Document title={`${caught.status} ${caught.statusText}`}>
-      <Layout>
+    <Document title={`${caught.status} ${caught.statusText}`}>      
         <h1>
           {caught.status}: {caught.statusText}
         </h1>
-        {message}
-      </Layout>
+        {message}      
     </Document>
   );
 }
