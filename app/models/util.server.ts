@@ -10,16 +10,16 @@ export const MenuList: HeaderMenu[] = [
   {
     key: "home",
     title: "Home",
-    route: "/"
+    route: "/",
   },
   {
     key: "case",
     title: "Cases",
-    route: "/case"
+    route: "/case",
   },
   { key: "client", title: "Clients", route: "/case" },
   { key: "programme", title: "Programmes", route: "/case" },
-  { key: "report", title: "Reports", route: "/case" }
+  { key: "report", title: "Reports", route: "/case" },
 ];
 
 export async function getMenu() {
@@ -39,8 +39,8 @@ export interface BrandDisplay {
 }
 
 export const Brand: BrandDisplay = {
-  logo: { visible: true, value: "cps" },
-  divisionName: { visible: false, value: "Division Name" }
+  logo: { visible: false, value: "cps" },
+  divisionName: { visible: false, value: "Division Name" },
 };
 
 export async function getBrand() {
